@@ -13,7 +13,7 @@
 </div>
 
 # 项目介绍
-此项目是一个简单、易上手的自主式bi平台，实现人人是数据分析式的愿景！对标power-bi、帆软BI、Superset、Metabase等bi平台。
+此项目是一个简单、易上手的自主式bi平台，实现人人是数据分析式的愿景！对标power-bi、帆软BI、Superset、Metabase、DataEase等bi平台。
 
 # 三步构建报表
 1.设置数据源
@@ -22,3 +22,5 @@
 
 3.从数据集中构建自己的报表！
 
+# OLAP
+Doris+Kylin的HOLAP解决方案
