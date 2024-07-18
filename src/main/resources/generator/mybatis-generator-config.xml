@@ -1,0 +1,42 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <!-- MyBatis3Simple风格 -->
+  <context id="simple" targetRuntime="MyBatis3Simple">
+
+    <property name="javaFileEncoding" value="UTF-8"/>
+    <!--生成mapper.xml时覆盖原文件-->
+    <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
+    <commentGenerator>
+      <!-- 是否去除自动生成的注释 true：是 ： false:否。 自动生成注释太啰嗦，可以编码扩展CommentGenerator -->
+      <property name="suppressAllComments" value="false"/>
+    </commentGenerator>
+
+    <!-- 数据库连接 -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://192.168.31.23:3306/jvm_test?useUnicode=true&amp;characterEncoding=utf8&amp;tinyInt1isBit=true&amp;serverTimezone=UTC"
+                    userId="root" password="JunMo_123">
+      <!-- 设置为true就只读取db_book下的表, 否则会优先读取到mysql的user表  -->
+      <property name="nullCatalogMeansCurrent" value="true"/>
+    </jdbcConnection>
+
+    <!-- 生成PO的包名和位置 -->
+    <javaModelGenerator targetPackage="com.dao.bi.entity" targetProject="src/main/java"/>
+
+    <!-- 生成XML映射文件的包名和位置 -->
+    <sqlMapGenerator targetPackage="mapper-xml" targetProject="src/main/resources"/>
+
+    <!-- 生成Mapper接口的包名和位置 -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.dao.bi.mapper" targetProject="src/main/java"/>
+
+    <!-- 要生成对应表配置 -->
+    <table tableName="jvm_data" domainObjectName="JvmData" >
+      <!-- 自增主键列 -->
+      <generatedKey column="id" sqlStatement="MYSQL" identity="true"/>
+      <!-- tinyint映射为Integer -->
+      <columnOverride column="role" javaType="Integer" jdbcType="TINYINT"/>
+    </table>
+  </context>
+</generatorConfiguration>
