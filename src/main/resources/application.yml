@@ -12,3 +12,7 @@ spring:
 mybatis:
   mapper-locations:
     - classpath:mybatis-mapper/*.xml
+
+dao-bi:
+  # 支持数据源类型, 启动时按需加载处理器
+  data-source-type: mysql、excel

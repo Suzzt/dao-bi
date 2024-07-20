@@ -1,4 +1,4 @@
-package com.dao.bi.enums;
+package com.dao.bi.common.enums;
 
 import com.dao.bi.handler.ApplicationHandler;
 import com.dao.bi.handler.ExcelApplicationHandler;
