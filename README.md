@@ -12,6 +12,9 @@
     </p>
 </div>
 
+# 项目现状
+项目处于开发中。。。。。。
+
 # 项目介绍
 此项目是一个简单、易上手的自主式bi平台，实现人人是数据分析式的愿景！对标power-bi、帆软BI、Superset、Metabase、DataEase等bi平台。
 
